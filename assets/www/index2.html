@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta http-equiv='Content-Type' content='text/html;charset=UTF-8'/>
+		<script src="https://sapui5.netweaver.ondemand.com/sdk/resources/sap-ui-core.js"
+				id="sap-ui-bootstrap"
+				data-sap-ui-libs="sap.m"
+				data-sap-ui-theme="sap_bluecrystal">
+		</script>
+		<script>
+				sap.ui.localResources("demoappui5");
+				var app = new sap.m.App({initialPage:"idmainView1"});
+				var page = sap.ui.view({id:"idmainView1", viewName:"demoappui5.tileView", type:sap.ui.core.mvc.ViewType.XML});
+				app.addPage(page);
+				app.placeAt("content");
+		</script>
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <title>DemoApp</title>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript" src="MyPlugin.js"></script>
+        
+        <script type="text/javascript">
+        var onDeviceReady = function(){};
+        function savelog(amount)
+        {
+        	var msg;
+        	window.plugins.MyPlugin.savelog(amount,
+        			function(sMessage) 
+        			{
+        			msg = sMessage;
+        			},
+        			function(eMessage) 
+        			{
+        			msg = eMessage;
+        			}
+        		);
+        	//alert("msg" + msg);
+			return msg;
+        }
+        
+        function show()
+        {
+        	var msg = savelog('1000');
+        	alert(msg);
+        }
+        
+        function init()
+        {
+        	document.addEventListener("deviceready",onDeviceReady,true);
+        }
+        </script>
+        
+    </head>
+    <body onLoad="init();" class="sapUiBody" role="application">
+    	<!-- <button onClick="show()">helo</button> -->
+        <div id="content"></div>
+    </body>
+</html>

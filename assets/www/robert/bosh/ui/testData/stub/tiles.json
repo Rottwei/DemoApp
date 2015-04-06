@@ -1,0 +1,17 @@
+{
+  "TileCollection" : [
+    {
+      "icon" : "alert",
+      "number" : "5",
+      "title" : "Tile 1"
+    },
+    {
+      "icon" : "business-objects-experience",
+      "title" : "Tile 2"
+    },
+    {
+      "icon" : "opportunities",
+      "title" : "Tile 3"
+    }
+  ]
+ }

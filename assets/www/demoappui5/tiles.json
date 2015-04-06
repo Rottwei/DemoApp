@@ -1,0 +1,17 @@
+{
+  "TileCollection" : [
+    {
+      "icon" : "alert",
+      
+      "title" : "Alerts"
+    },
+    {
+      "icon" : "business-objects-experience",
+      "title" : "Dashboard"
+    },
+    {
+      "icon" : "opportunities",
+      "title" : "Jobs"
+    }
+  ]
+}

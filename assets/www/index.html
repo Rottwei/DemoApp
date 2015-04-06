@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta http-equiv='Content-Type' content='text/html;charset=UTF-8'/>
+		<link rel="stylesheet" type="text/css" href="robert/bosh/ui/style/view.css" />
+		<script src="https://sapui5.netweaver.ondemand.com/sdk/resources/sap-ui-core.js"
+				id="sap-ui-bootstrap"
+				data-sap-ui-libs="sap.m,sap.makit"
+				data-sap-ui-xx-bindingSyntax="complex"
+				data-sap-ui-theme="sap_bluecrystal">
+		</script>
+		<!-- only load the mobile lib "sap.m" and the "sap_bluecrystal" theme -->
+		<script type="text/javascript" src="robert/bosh/ui/config/config.js"></script>
+		<script type="text/javascript" src="robert/bosh/ui/common/makit/ChartBuilder.js"></script>
+		<script>
+				jQuery.sap.require("robert.bosh.ui.common.Util");
+				jQuery.sap.require("robert.bosh.ui.common.Constant"); 
+				var adminApp = new sap.m.App({id:'adminApp'});
+				var page = sap.ui.view({ id:"main", viewName:"robert.bosh.ui.view.Main", type:sap.ui.core.mvc.ViewType.XML});
+				adminApp.addPage(page);
+				adminApp.placeAt("content");
+				jQuery.sap.require("robert.bosh.ui.common.History");
+		</script>
+	</head>
+	<body class="sapUiBody" role="application">
+	
+		<div id="content"></div>
+	</body>
+</html>

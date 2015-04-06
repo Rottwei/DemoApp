@@ -1,0 +1,10 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m"
+		controllerName="demoappui5.mainView" xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page title="DemoApp">
+		<content>
+			<Input id="amount" type="Text"></Input>
+			<Button press="logHandler" text="Save Offline (plugin call)"/>
+			<Button press="sync" text="Sync Data"/>
+		</content>
+	</Page>
+</core:View>

@@ -1,0 +1,18 @@
+<core:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m" controllerName="robert.bosh.ui.view.Main" xmlns:html="http://www.w3.org/1999/xhtml">
+	<Page showHeader="true" enableScrolling="false" title="robertbosh">
+		<content>
+			<TileContainer id="container" 
+							   tiles="{path: '/TileCollection'}">
+					<StandardTile   icon="sap-icon://{icon}" 
+									type="{type}"
+									number="{number}" 
+									numberUnit="{numberUnit}" 
+									title="{title}" 
+									info="{info}"
+									infoState="{infoState}" 
+									press="handleTilePress"/>
+				</TileContainer>
+		</content>
+	</Page>
+</core:View>
